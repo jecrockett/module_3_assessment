@@ -2,9 +2,8 @@ class SearchItemsController < ApplicationController
 
   def index
     best_buy = BestBuyService.new
-    binding.pry
-    search_terms =
-    best_buy.search(search_terms)
+    search_terms = "(search=#{params[:item]})"
+    @items = best_buy.search(search_terms)
   end
 
 end
