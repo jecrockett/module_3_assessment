@@ -26,8 +26,7 @@
         null,
         null,
         1,
-        0,
-        0,
+        1,
         null,
         null,
         null,
@@ -49,6 +48,11 @@
       ],
       "/Users/JEC/Turing/3Module/assessment/storedom/app/models/item.rb": [
         1,
+        1,
+        1,
+        null
+      ],
+      "/Users/JEC/Turing/3Module/assessment/storedom/app/serializers/item_serializer.rb": [
         1,
         1,
         null
@@ -111,6 +115,6 @@
         0
       ]
     },
-    "timestamp": 1457455550
+    "timestamp": 1457456572
   }
 }

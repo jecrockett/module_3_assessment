@@ -6,7 +6,6 @@ class Api::V1::ItemsController < Api::ApiController
   end
 
   def show
-    binding.pry
     respond_with Item.find(params[:id])
   end
 
