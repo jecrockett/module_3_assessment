@@ -11,9 +11,11 @@ class BestBuyService
   def search(search_url)
     response = conn.get do |req|
       req.url "#{search_url}"
-      req.params['format'] = "json"
-      req.params['total'] = '15'
       req.params['apiKey'] = ENV['BEST_BUY_KEY']
+      req.params['format'] = "json"
+      req.params['pageSize'] = '15'
+      req.params['show'] = "sku,name,customerReviewAverage,shortDescription,salePrice,image"
+
     end
     binding.pry
   end
