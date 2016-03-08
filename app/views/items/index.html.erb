@@ -1,6 +1,12 @@
 <div class="container">
   <div class="row">
     <div class="col-sm-12">
+      <%= form_tag(:search) do |f| %>
+        <%= f.textfield :item %>
+        <%= f.submit %>
+      <% end %>
+    </div>
+    <div class="col-sm-12">
       <h1><%= @items.count %> Items</h1>
     </div>
   </div>
@@ -15,4 +21,3 @@
     </div>
   <% end %>
 </div>
-

@@ -53,7 +53,7 @@ RSpec.describe Api::V1::ItemsController, type: :controller do
 
       expect(items.count).to eq 2
 
-      post :index, format: :json, name: "big metal suit",
+      post :create, format: :json, name: "big metal suit",
                                   description: "an awesome, inflexible suit",
                                   image_url: "https://google.com"
 
