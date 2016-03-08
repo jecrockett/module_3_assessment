@@ -47,7 +47,20 @@ RSpec.describe Api::V1::ItemsController, type: :controller do
 
   describe '#create' do
     it "creates the item and returns that item in json" do
-      post :index, format: :json
+      get :index, format: :json
+      items = JSON.parse(response.body)
+
+
+      expect(items.count).to eq 2
+
+      post :index, format: :json, name: "big metal suit",
+                                  description: "an awesome, inflexible suit",
+                                  image_url: "https://google.com"
+
+      item = JSON.parse(response.body)
+
+      expect(response.status).to eq 201
+      expect(item.keys).to eq ["name", "description", "image_url"]
     end
 
   end

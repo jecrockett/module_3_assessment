@@ -18,7 +18,7 @@ class Api::V1::ItemsController < Api::ApiController
   def create
     item = Item.create(item_params)
     if item.save
-      respond_with Item.find(item.id)
+      respond_with Item.find(item.id), status: 201
     else
       respond_with status: 404
     end
