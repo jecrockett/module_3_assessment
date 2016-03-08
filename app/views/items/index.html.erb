@@ -1,9 +1,9 @@
 <div class="container">
   <div class="row">
     <div class="col-sm-12">
-      <%= form_tag(:search) do |f| %>
-        <%= f.textfield :item %>
-        <%= f.submit %>
+      <%= form_tag(search_path, method: 'get') do %>
+        <%= text_field_tag :item %>
+        <%= submit_tag "Search" %>
       <% end %>
     </div>
     <div class="col-sm-12">
