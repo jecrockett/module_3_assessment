@@ -9,5 +9,10 @@ class Api::V1::ItemsController < Api::ApiController
     respond_with Item.find(params[:id])
   end
 
+  def destroy
+    item = Item.find(params[:id])
+    item.delete
+  end
+
 
 end
