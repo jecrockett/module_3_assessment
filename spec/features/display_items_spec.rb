@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.feature "Display items", type: :feature do
+RSpec.describe "Display items", type: :feature do
   scenario "Visit the root path" do
     visit root_path
 

@@ -14,6 +14,8 @@ gem "therubyracer"
 gem "less-rails-bootstrap"
 gem "figaro"
 gem "faraday"
+gem "responders"
+gem "active_model_serializers", github: "rails-api/active_model_serializers"
 
 
 group :development do
