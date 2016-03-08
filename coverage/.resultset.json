@@ -17,40 +17,46 @@
         1,
         null
       ],
-      "/Users/JEC/Turing/3Module/assessment/storedom/app/api/api_controller.rb": [
-        0,
-        0,
-        0,
-        0
+      "/Users/JEC/Turing/3Module/assessment/storedom/app/controllers/api/v1/items_controller.rb": [
+        1,
+        1,
+        null,
+        1,
+        1,
+        null,
+        null,
+        null,
+        null
       ],
-      "/Users/JEC/Turing/3Module/assessment/storedom/app/api/v1/items_controller.rb": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
+      "/Users/JEC/Turing/3Module/assessment/storedom/app/controllers/api/api_controller.rb": [
+        1,
+        1,
+        null,
+        null
       ],
       "/Users/JEC/Turing/3Module/assessment/storedom/app/controllers/application_controller.rb": [
-        0,
-        0,
-        0,
-        0,
-        0
+        1,
+        null,
+        null,
+        1,
+        null
+      ],
+      "/Users/JEC/Turing/3Module/assessment/storedom/app/models/item.rb": [
+        1,
+        1,
+        1,
+        null
       ],
       "/Users/JEC/Turing/3Module/assessment/storedom/app/controllers/items_controller.rb": [
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
         0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
+        null,
+        null
       ],
       "/Users/JEC/Turing/3Module/assessment/storedom/app/controllers/orders_controller.rb": [
         0,
@@ -69,12 +75,6 @@
         0,
         0,
         0,
-        0,
-        0,
-        0,
-        0
-      ],
-      "/Users/JEC/Turing/3Module/assessment/storedom/app/models/item.rb": [
         0,
         0,
         0,
@@ -100,6 +100,6 @@
         0
       ]
     },
-    "timestamp": 1457453715
+    "timestamp": 1457454381
   }
 }
