@@ -36,12 +36,19 @@ RSpec.describe Api::V1::ItemsController, type: :controller do
 
       delete :destroy, format: :json, id:2
 
-      expect(page.status_code).to eq 204
+      expect(response.status).to eq 204
 
       get :index, format: :json
       items = JSON.parse(response.body)
 
       expect(items.count).to eq 1
     end
+  end
+
+  describe '#create' do
+    it "creates the item and returns that item in json" do
+      post :index, format: :json
+    end
+
   end
 end
