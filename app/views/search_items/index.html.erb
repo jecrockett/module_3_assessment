@@ -1,14 +1,18 @@
 <h1>Search Results</h1>
 
 <div class="search-results">
-  <% @items.each_with_index do |item| %>
-    <div class="item">
-      <h6><%= item['name'] %></h6>
-      <p>Sku: <%= item['sku'] %></p>
-      <p>Review Avg: <%= item['customerReviewAverage'] %></p>
-      <p><%= item['shortDescription'] %></p>
-      <p>$<%= item['salePrice'] %></p>
-      <%= image_tag item['image'] %>
-    </div>
+  <% if @items.nil? %>
+    <h3>We could not find any results. Please try another search.</h3>
+  <% else %>
+    <% @items.each_with_index do |item| %>
+      <div class="item">
+        <h6><%= item['name'] %></h6>
+        <p>Sku: <%= item['sku'] %></p>
+        <p>Review Avg: <%= item['customerReviewAverage'] %></p>
+        <p><%= item['shortDescription'] %></p>
+        <p>$<%= item['salePrice'] %></p>
+        <%= image_tag item['image'] %>
+      </div>
+    <% end %>
   <% end %>
 </div>

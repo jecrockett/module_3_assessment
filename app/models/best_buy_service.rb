@@ -2,7 +2,9 @@ class BestBuyService
   attr_reader :conn
 
   def initialize(search_params)
-    @conn = Faraday.new(url: "https://api.bestbuy.com/v1/products(longDescription=#{search_params}*)") do |faraday|
+    search_string = URI.encode(search_params)
+
+    @conn = Faraday.new(url: "https://api.bestbuy.com/v1/products(longDescription=#{search_string}*)") do |faraday|
       faraday.request :url_encoded
       faraday.adapter Faraday.default_adapter
     end
