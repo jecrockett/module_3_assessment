@@ -36,7 +36,6 @@ $(document).ready(function(){
       // on success, render the results
       success: function(items) {
         $('.search-results').empty()
-        debugger
         $.each(items.products, function(index, item){
           renderItem(item);
         })
@@ -48,7 +47,6 @@ $(document).ready(function(){
   });
 
   var renderItem = function(item) {
-    debugger
     $('.search-results').append(
       "<div class='item'><p>" +
       item.name +
@@ -56,7 +54,7 @@ $(document).ready(function(){
       item.shortDescription +
       "</p><img src=" +
       item.image +
-      "/><p>" +
+      "><p>" +
       item.salePrice +
       "</p><p>" +
       item.customerReviewAverage +
