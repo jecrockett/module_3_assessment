@@ -26,6 +26,7 @@ group :development, :test do
   gem "pry-byebug", require: "pry-byebug"
   gem "launchy"
   gem "capybara"
+  gem "selenium-webdriver"
   gem "rspec-rails"
 end
 
