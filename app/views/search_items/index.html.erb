@@ -1,3 +1,13 @@
+<div>
+  <h3>Try Another Search:</h3>
+  <div class="col-sm-12">
+    <!-- <%= form_tag(search_path, remote: true) do %> -->
+    <%= text_field_tag :search, nil, id:"search-field" %>
+    <%= submit_tag "Search", id:"search-button" %>
+    <!-- <% end %> -->
+  </div>
+</div>
+
 <h1>Search Results</h1>
 
 <div class="search-results">

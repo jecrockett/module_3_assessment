@@ -1,0 +1,68 @@
+// This is a manifest file that'll be compiled into application.js, which will include all the files
+// listed below.
+//
+// Any JavaScript/Coffee file within this directory, lib/assets/javascripts, vendor/assets/javascripts,
+// or vendor/assets/javascripts of plugins, if any, can be referenced here using a relative path.
+//
+// It's not advisable to add code directly here, but if you do, it'll appear at the bottom of the
+// compiled file.
+//
+// Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
+// about supported directives.
+//
+//= require jquery
+//= require jquery_ujs
+//= require twitter/bootstrap
+//= require turbolinks
+//= require_tree .
+
+$(document).ready(function(){
+  //when the search button is clicked
+  $('#search-button').click(function(){
+    // extract the value from the text box
+    var search_string = $('#search-field').val()
+    // then send the request
+    $.ajax({
+      type: "GET",
+      url: "https://api.bestbuy.com/v1/products(longDescription=" +
+      search_string +
+      "*)",
+      data: {
+        apiKey: "<%= ENV['BEST_BUY_KEY'] %>",
+        format: 'json',
+        pageSize: '15',
+        show: 'sku,name,customerReviewAverage,shortDescription,salePrice,image'
+      },
+      // on success, render the results
+      success: function(items) {
+        $('.search-results').empty()
+        debugger
+        $.each(items.products, function(index, item){
+          renderItem(item);
+        })
+      },
+      error: function(xhr){
+        console.log(xhr.responseText)
+      }
+    });
+  });
+
+  var renderItem = function(item) {
+    debugger
+    $('.search-results').append(
+      "<div class='item'><p>" +
+      item.name +
+      "</p><p>" +
+      item.shortDescription +
+      "</p><img src=" +
+      item.image +
+      "/><p>" +
+      item.salePrice +
+      "</p><p>" +
+      item.customerReviewAverage +
+      "</p><p>" +
+      item.sku +
+      "</p></div>"
+    );
+  }
+});
